@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  PRODUCT NAME: "TwinStock" is a placeholder.
+  To rename, change PRODUCT_NAME in the small script at the bottom of this file.
+-->
+<title>TwinStock: Sync Etsy and Shopify Inventory in Real Time | Early Access</title>
+<meta name="description" content="Keep inventory in sync between your Etsy shop and Shopify store. Real-time, two-way stock and listing sync for print-on-demand and handmade sellers. Stop overselling. Join the early-access list.">
+<link rel="canonical" href="https://freddyfazzbear15.github.io/">
+<meta property="og:title" content="TwinStock: Sync Etsy and Shopify inventory in real time">
+<meta property="og:description" content="Real-time two-way inventory sync for print-on-demand and handmade sellers running an Etsy shop and a Shopify store. Early-access waitlist.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freddyfazzbear15.github.io/">
+<meta name="theme-color" content="#fbf6ee">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='9' width='14' height='18' rx='3' fill='%23a8462a'/%3E%3Crect x='15' y='5' width='14' height='18' rx='3' fill='%234f6142'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="TwinStock home" data-brand-label>
+      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <rect x="3" y="9" width="14" height="18" rx="3" fill="#a8462a"/>
+        <rect x="15" y="5" width="14" height="18" rx="3" fill="#4f6142"/>
+        <path d="M11 18h10m-3-3 3 3-3 3" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span data-brand>TwinStock</span>
+    </a>
+    <a class="header-cta" href="#join">Join the early-access list</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">For Etsy + Shopify sellers &middot; Pre-launch</span>
+      <h1>Sell it on Etsy. Watch the stock drop on Shopify a moment later.</h1>
+      <p class="lede">
+        <span data-brand>TwinStock</span> is a planned real-time, two-way sync that keeps inventory and listings
+        in step between your Etsy shop and your Shopify store, built first for print-on-demand and handmade sellers.
+        One single source of truth, no double work, no overselling.
+      </p>
+      <ul class="hero-points">
+        <li>Stock updates the moment an Etsy item sells</li>
+        <li>Printful and variant mapping that survives different size and colour setups</li>
+        <li>Shared materials stock across many handmade listings</li>
+        <li>One flat price for both shops, plus a free tier</li>
+      </ul>
+    </div>
+
+    <div class="form-card" id="join">
+      <h2>Join the early-access list</h2>
+      <p class="small">We're building this now. Join the list and we'll email you when early access opens. No spam, and you can leave any time.</p>
+
+      <!-- FORM ENDPOINT: replace FORM_ENDPOINT_URL with the form service URL (e.g. https://formspree.io/f/<form-id>). -->
+      <form action="FORM_ENDPOINT_URL" method="POST">
+        <div class="field">
+          <label for="email">Email <span class="req" aria-hidden="true">*</span><span class="hint"> (required)</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@yourshop.com">
+        </div>
+
+        <fieldset>
+          <legend>Where do you sell? <span class="hint">(tick all that apply)</span></legend>
+          <div class="checks">
+            <label class="check"><input type="checkbox" name="platforms" value="Etsy"> Etsy</label>
+            <label class="check"><input type="checkbox" name="platforms" value="Shopify"> Shopify</label>
+            <label class="check"><input type="checkbox" name="platforms" value="Other"> Other</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="product_count">About how many products do you have?</label>
+          <select id="product_count" name="product_count">
+            <option value="">Choose one</option>
+            <option value="1-10">1 to 10</option>
+            <option value="11-50">11 to 50</option>
+            <option value="51-200">51 to 200</option>
+            <option value="201-500">201 to 500</option>
+            <option value="500+">More than 500</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="headache">Biggest sync headache? <span class="hint">(optional)</span></label>
+          <textarea id="headache" name="headache" rows="3" placeholder="e.g. I sold the last medium on Etsy and Shopify sold it again"></textarea>
+        </div>
+
+        <button class="btn" type="submit">Join the early-access list</button>
+        <p class="form-note">We'll only use your email to tell you about early access.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="problem">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The problem</span>
+      <h2>Two shops shouldn't mean twice the work</h2>
+      <p class="lede">Running an Etsy shop and a Shopify store side by side is a good way to reach more buyers. Keeping them in sync by hand is not.</p>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Overselling</h3>
+        <p>Your last one-of-a-kind piece sells on Etsy at 2am. By morning someone has bought it again on Shopify, and now you're writing an apology and issuing a refund.</p>
+      </div>
+      <div class="card">
+        <h3>Double work</h3>
+        <p>Every restock, price change and new colourway gets typed in twice. Miss one and the two shops quietly drift apart, with no single source of truth for what you actually have.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">How it will work</span>
+      <h2>Three steps to keep inventory in sync</h2>
+    </div>
+    <ol class="steps grid grid-3">
+      <li class="card">
+        <h3>Connect both shops</h3>
+        <p>Link your Etsy shop and your Shopify store. Both stay open and selling exactly as they are now.</p>
+      </li>
+      <li class="card">
+        <h3>Match your products</h3>
+        <p>We suggest matches between listings and variants, even when sizes or colours are named or ordered differently on each store. You confirm or adjust them.</p>
+      </li>
+      <li class="card">
+        <h3>Sell anywhere</h3>
+        <p>When something sells on either shop, stock updates on the other in real time. Shared materials count down across every listing that uses them.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="alt" id="different">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why it's different</span>
+      <h2>Built for makers, not warehouses</h2>
+      <p class="lede">General multichannel tools are designed around big catalogues and warehouse stock. Etsy sellers work differently.</p>
+    </div>
+    <ul class="compare">
+      <li>
+        <div class="them"><b>Typical multichannel tools</b>Etsy is one channel among many, often synced on a timer.</div>
+        <div class="us"><b>Our plan</b>Etsy-first. Stock updates as soon as an Etsy item sells, to protect against overselling.</div>
+      </li>
+      <li>
+        <div class="them"><b>Typical multichannel tools</b>Variants must match exactly on both stores, or the sync breaks.</div>
+        <div class="us"><b>Our plan</b>Printful and variant mapping that holds up when size and colour options are set up differently on each store.</div>
+      </li>
+      <li>
+        <div class="them"><b>Typical multichannel tools</b>One SKU, one stock number.</div>
+        <div class="us"><b>Our plan</b>Shared materials and component stock, so one spool of yarn or one batch of blanks counts down across every listing that uses it.</div>
+      </li>
+      <li>
+        <div class="them"><b>Typical multichannel tools</b>Priced per shop or per channel, so two shops can mean paying twice.</div>
+        <div class="us"><b>Our plan</b>One flat price covers both shops, and there's a free tier for small catalogues.</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Pricing</span>
+      <h2>Planned pricing <span class="planned-badge">Planned</span></h2>
+      <p class="lede">One flat price for your Etsy shop and your Shopify store together. No per-shop doubling.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card price-card">
+        <h3>Free</h3>
+        <p class="price">$0 <span>/mo</span></p>
+        <ul>
+          <li>Up to 10 products</li>
+          <li>Etsy + Shopify sync</li>
+          <li>Good for trying it with your best sellers</li>
+        </ul>
+      </div>
+      <div class="card price-card featured">
+        <h3>Starter</h3>
+        <p class="price">$29 <span>/mo</span></p>
+        <ul>
+          <li>Both shops on one plan</li>
+          <li>Real-time two-way stock sync</li>
+          <li>Printful and variant mapping</li>
+        </ul>
+      </div>
+      <div class="card price-card">
+        <h3>Pro</h3>
+        <p class="price">$59 <span>/mo</span></p>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>Shared materials and component stock</li>
+          <li>For larger handmade catalogues</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pricing-note">These prices and plan details are planned and may change before launch. Joining the list doesn't commit you to anything.</p>
+  </div>
+</section>
+
+<section class="alt" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions sellers ask</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Is this approved by Etsy?</summary>
+        <p>Not yet. We're in early access, and our application for Etsy API access is in progress. We'll only connect to Etsy through the official Etsy API, and we'll tell everyone on the list how that application goes. <span data-brand>TwinStock</span> is not endorsed or certified by Etsy, Inc.</p>
+      </details>
+      <details>
+        <summary>Can I use it today?</summary>
+        <p>Not yet. <span data-brand>TwinStock</span> is still being built. Join the early-access list and we'll email you when it's ready to try.</p>
+      </details>
+      <details>
+        <summary>Do my Etsy shop and Shopify store stay as they are?</summary>
+        <p>Yes. Both shops keep running and selling exactly as they do now. The goal is simply to keep inventory and listings in sync between them, so you have one single source of truth and stop doing the same job twice.</p>
+      </details>
+      <details>
+        <summary>I use Printful. Will that work?</summary>
+        <p>Print-on-demand with Printful is one of the first setups we're designing for, including products where size and colour variants are set up differently on each store.</p>
+      </details>
+      <details>
+        <summary>What does joining the list cost?</summary>
+        <p>Nothing. Joining the list is free, and there's a planned free tier for up to 10 products after launch.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Ready to stop overselling?</h2>
+    <p class="lede">Help shape the tool and be first in line when early access opens.</p>
+    <a class="btn" href="#join">Join the early-access list</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="year">2026</span> <span data-brand>TwinStock</span>. Pre-launch. Waitlist only.</p>
+    <p>The term 'Etsy' is a trademark of Etsy, Inc. This application uses the Etsy API but is not endorsed or certified by Etsy, Inc.</p>
+    <p>Shopify is a trademark of Shopify Inc. Printful is a trademark of its respective owner. This site is not affiliated with or endorsed by Shopify Inc. or Printful.</p>
+  </div>
+</footer>
+
+<script>
+  /* ===== CHANGE THE PRODUCT NAME HERE (one spot) ===== */
+  var PRODUCT_NAME = "TwinStock";
+
+  (function () {
+    var nodes = document.querySelectorAll("[data-brand]");
+    for (var i = 0; i < nodes.length; i++) nodes[i].textContent = PRODUCT_NAME;
+    var logo = document.querySelector("[data-brand-label]");
+    if (logo) logo.setAttribute("aria-label", PRODUCT_NAME + " home");
+    document.title = document.title.replace("TwinStock", PRODUCT_NAME);
+    var metas = document.querySelectorAll('meta[name="description"], meta[property^="og:"]');
+    for (var j = 0; j < metas.length; j++) {
+      metas[j].setAttribute("content", metas[j].getAttribute("content").replace("TwinStock", PRODUCT_NAME));
+    }
+    var y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
